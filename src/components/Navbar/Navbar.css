@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     width:100%;
     padding: 20px 6%;
     display: flex;
@@ -10,19 +10,19 @@
     z-index: 1;
 }
 
-navbar-left{
+.navbar-left {
     display: flex;
     align-items: center;
     gap: 50ps;
 }
-.navbar-left img{
+.navbar-left img {
     width: 90px;
 }
-.navbar-left ul{
+.navbar-left ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
-.navbar-left ul li{
+.navbar-left ul li {
     cursor: pointer;
 }
