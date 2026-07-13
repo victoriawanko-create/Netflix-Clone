@@ -11,7 +11,6 @@ const Navbar = () => {
         <div className="navbar">
             <div className="navbar-left">
                 <img src={logo} alt="" />
-            </div>
             <ul>
                 <li>Home</li>
                 <li>TV Shows</li>
@@ -20,6 +19,7 @@ const Navbar = () => {
                 <li>My List</li>
                 <li>Browse by Languages</li>
             </ul>
+            </div>
             <div className="navbar-right">
                 <img src={searchIcon} alt="" className="icons" />
                 <p>Children</p>
@@ -27,6 +27,9 @@ const Navbar = () => {
                 <div className="navbar-profile"></div>
                 <img src={profileImg} alt="" className="profile" />
                 <img src={caretIcon} alt="" />
+                <div className="dropdown">
+                    <p>Sign out of Netflix</p>
+                </div>
             </div>
         </div>
     )
