@@ -8,6 +8,7 @@ import {
     addDoc, 
     getFirestore,
     collection } from "firebase/firestore";
+import { toast } from "react-toastify"
 
 
 const firebaseConfig = {
@@ -35,18 +36,30 @@ const signup = async (name, email, password) => {
             email,
         })
     } catch (error) {
-        console.log(error);
-        alert(error);
-    }
+  console.log(error);
+
+  const errorMessage = error.code
+    .split("/")[1]
+    .split("-")
+    .join(" ");
+
+  toast.error(errorMessage);
+}
 }
 
 const login = async (email, password) => {
     try {
         await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-        console.log(error)
-        alert(error);
-    }
+  console.log(error);
+
+  const errorMessage = error.code
+    .split("/")[1]
+    .split("-")
+    .join(" ");
+
+  toast.error(errorMessage);
+}
 }
 
 const logout = () => {
